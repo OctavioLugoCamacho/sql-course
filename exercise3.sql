@@ -14,3 +14,12 @@ WHERE id IN (
 	FROM platzi.alumnos
 	WHERE tutor_id = 30
 );
+
+-- Devuelve lista de alumnos que no contengan el tutor que tiene id 30
+SELECT *
+FROM platzi.alumnos
+WHERE id NOT IN (
+	SELECT id
+	FROM platzi.alumnos
+	WHERE tutor_id = 30
+);
